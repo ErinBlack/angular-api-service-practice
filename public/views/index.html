@@ -7,10 +7,31 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/app.js" charset="utf-8"></script>
+    <script src="scripts/services/gif.service.js" charset="utf-8"></script>
   </head>
-  <body>
-    <header >
+  <body ng-app="myApp">
+    <header class="jumbotron">
       <h1>Let's Do This Shit Again</h1>
     </header>
+    <div class="container" ng-controller = "GifController as gc">
+      <section >
+        <div class="row">
+          <button type="button" name="button" class="btn col-6-xs" ng-click ="gc.randomGif()">Click for Random Gif</button>
+          <img class="col-6-xs img-rounded img-thumbnail" ng-src="{{gc.image.fixed_height_downsampled_url}}">
+        </div>
+      </section>
+      <section>
+        <form class="" ng-submit="gc.searchGif(searchTerm)">
+          <input type="text" name="" value="" ng-model="searchTerm">
+          <input type="submit" value="Submit"/>
+        </form>
+        <div class="row">
+          <div class="col-md-4" ng-repeat="gif in gc.gifs">
+            <img  class="img-thumbnail img-rounded" ng-src="{{gif.images.fixed_width_downsampled.url}}">
+          </div>
+
+        </div>
+      </section>
+    </div>
   </body>
 </html>
