@@ -1,0 +1,25 @@
+{
+  "name": "angular-api-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErinBlack/angular-api-service-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErinBlack/angular-api-service-practice/issues"
+  },
+  "homepage": "https://github.com/ErinBlack/angular-api-service-practice#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
